@@ -1,5 +1,5 @@
 
-var monkey , monkey_running;
+var monkey , monkey_running,monkey_stop;
 var banana ,bananaImage, stone, stoneImage;;
 var FoodGroup, stoneGroup;
 var Survivaltime=0;
@@ -8,8 +8,8 @@ var gr;
 function preload(){
   
   
-  monkey_running =            loadAnimation("sprite_0.png","sprite_1.png","sprite_2.png","sprite_3.png","sprite_4.png","sprite_5.png","sprite_6.png","sprite_7.png","sprite_8.png")
-  
+  monkey_running =  loadAnimation("sprite_0.png","sprite_1.png","sprite_2.png","sprite_3.png","sprite_4.png","sprite_5.png","sprite_6.png","sprite_7.png","sprite_8.png")
+  monkey_stop=loadAnimation("sprite_0.png");  
   bananaImage = loadImage("banana.png");
   stoneImage = loadImage("obstacle.png");
   
@@ -27,6 +27,7 @@ function setup() {
   
   monkey=createSprite(50,350,10,50);
   monkey.addAnimation("move",monkey_running);
+   monkey.addAnimation("stop",monkey_stop);
   monkey.scale=0.10;
   
   gr=createSprite(50,370,700,10);
