@@ -55,8 +55,10 @@ function draw() {
   }
   
     if(stoneGroup.isTouching(monkey)){
+     back.velocityX=0; 
       gr.velocityX=0;
-      monkey.veloocityY=0;
+      monkey.velocityY=0;
+      monkey.changeAnimation("stop");
       FoodGroup.setLifetimeEach(-1);
       FoodGroup.setVelocityXEach(0);
       stoneGroup.setLifetimeEach(-1);
